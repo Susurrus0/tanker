@@ -8,7 +8,7 @@ class FolderCopyApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Tanker")
-        self.root.geometry("450x350")
+        self.root.geometry("500x350")  # Increased width to fit 'Browse' buttons
         self.root.resizable(False, False)
 
         style = ttk.Style()
@@ -19,8 +19,8 @@ class FolderCopyApp:
         style.configure("TCheckbutton", font=("Helvetica", 11))
         style.map("TButton", background=[('active', '#003f88')])
 
-        # Main Frame
-        main_frame = ttk.Frame(root, padding="10 10 10 10")
+        # Main Frame with padding from the window frame
+        main_frame = ttk.Frame(root, padding="20 20 20 20")
         main_frame.grid(row=0, column=0, sticky='nsew')
 
         # Frame for Source Directory
